@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
+""" More involved type annotations  """
+from typing import Mapping, Any, Sequence, Union, TypeVar
 
-from typing import Mapping, Any, Union, TypeVar
+
+T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[TypeVar, None] = None) -> Union[Any, TypeVar]:
-    '''
-    Function that takes a dictionary dct, a key key and an optional default value.
-    Returns the value linked to key in dct if it exists, otherwise default.
-    '''
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[T, None] = None
+                     ) -> Union[Any, T]:
+    """ Safely get value """
     if key in dct:
         return dct[key]
     else:
