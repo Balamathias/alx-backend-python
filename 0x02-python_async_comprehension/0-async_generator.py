@@ -7,5 +7,5 @@ from typing import Any, AsyncGenerator
 async def async_generator() -> AsyncGenerator[float, Any]:
     '''Async generator that yields random numbers'''
     for _ in range(10):
-        await asyncio.sleep(1)
         yield (random.random() * 10)
+        await asyncio.sleep(1)
