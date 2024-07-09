@@ -1,7 +1,4 @@
 #!/bin/usr/env python3
-
-'''My first async generator comprehension in Python'''
-
 import asyncio
 import random
 from typing import Any, AsyncGenerator
